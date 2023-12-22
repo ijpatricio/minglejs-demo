@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite'
-import laravel from 'laravel-vite-plugin'
+import laravel, {refreshPaths} from 'laravel-vite-plugin'
 import dotenv from 'dotenv'
+import vue from '@vitejs/plugin-vue'
 
 dotenv.config()
 
@@ -21,7 +22,18 @@ export default defineConfig({
     plugins: [
         laravel({
             input: 'resources/js/app.js',
-            refresh: true,
+            refresh: [
+                ...refreshPaths,
+                'app/**/*.php',
+            ],
+        }),
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
         }),
     ],
 })
