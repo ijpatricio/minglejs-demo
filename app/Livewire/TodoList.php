@@ -30,8 +30,6 @@ class TodoList extends Component
         Todo::create([
             'description' => $todo,
         ]);
-
-        return Str::random(10);
     }
 
     #[Renderless]
