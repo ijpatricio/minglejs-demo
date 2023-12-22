@@ -11,15 +11,8 @@
     </div>
 
     @if($isVisible)
-        <div class="flex flex-col gap-y-4 my-8">
-            <div wire:ignore x-ignore>
-                <div id="{{ $this->id }}"></div>
-            </div>
-
-            <div wire:ignore x-ignore>
-                Baaz
-            </div>
+        <div wire:ignore x-ignore>
+            <div id="{{ $this->id }}"></div>
         </div>
-
     @endif
 </div>

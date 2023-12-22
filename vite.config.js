@@ -1,3 +1,4 @@
+import path from "path"
 import {defineConfig} from 'vite'
 import laravel, {refreshPaths} from 'laravel-vite-plugin'
 import dotenv from 'dotenv'
@@ -36,4 +37,9 @@ export default defineConfig({
             },
         }),
     ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./resources/js"),
+        },
+    },
 })

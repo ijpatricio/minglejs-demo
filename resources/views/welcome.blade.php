@@ -4,13 +4,15 @@
 
     <div class="flex h-screen items-center justify-center flex-col gap-y-4">
 
-        <div>Welcome to Joined</div>
+        <h1 class="text-2xl font-bold">Welcome to Joined</h1>
 
-{{--        <livewire:todo-list :is-visible="true"/>--}}
-
-        <livewire:todo-list :is-visible="true"/>
+        <div class="h-32"></div>
 
         <livewire:todo-list />
+
+        <div class="h-32"></div>
+
+        <livewire:todo-list :is-visible="false"/>
 
     </div>
 
