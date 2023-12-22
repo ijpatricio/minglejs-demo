@@ -6,6 +6,7 @@ tasks:
       sed -i "s#APP_URL=http://localhost#APP_URL=$(gp url 8000)#g" .env
       sed -i "s#GITPOD_VITE_URL=#GITPOD_VITE_URL=$(gp url 5173)#g" .env
       composer install --ignore-platform-reqs
+      gp sync-done composer-deps
       php artisan key:generate
       php artisan storage:link
       php artisan serve
@@ -20,6 +21,7 @@ tasks:
     openMode: split-right
     command: |
       touch database/database.sqlite
+      gp sync-await composer-deps
       php artisan migrate:fresh --seed
 
 ports:
