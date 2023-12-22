@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
     wire: {},
+    wireId: {},
 })
 const message = 'I\'m A TodoList'
 </script>

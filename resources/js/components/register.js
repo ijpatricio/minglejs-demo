@@ -7,7 +7,12 @@ const register = (components) => {
     for (const [name, component] of Object.entries(components)) {
         window.JSComponents[name] = {
             create(id, $wire, wireId) {
-                const el = document.getElementById(id)
+
+                let el = id
+
+                if(typeof id === 'string') {
+                    el = document.getElementById(id)
+                }
 
                 if (el) {
                     const app = createApp(

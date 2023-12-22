@@ -14,7 +14,7 @@ class TodoList extends Component
 
     public function mount()
     {
-        $this->id = Str::random();
+        $this->id = 'joined-' . Str::random();
     }
 
     #[Renderless]
