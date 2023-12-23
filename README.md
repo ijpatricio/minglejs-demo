@@ -22,3 +22,13 @@ Most likely you will pair Livewire with just one taste of JS framework, but you 
 - You might be thinking you're thinking we should use vanilla JS/jQuery plugins, implementing in Alpine.
   - But I ask: why is that? Some JS frameworks elevate a lot the DX and tooling.
 - Having a Livewire component as a container, in our Vue/React component we get to call PHP functions simply by calling `$wire.method()`. We don't have to write an Ajax request, a route, a controller, etc.  
+
+# How?
+
+// 
+
+# In the works
+
+- SPA: Check wire:navigate and `@persist`. You can use them to persist state between pages. 
+- Nested components.
+- JS add later in the DOM.
