@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Mingle\RendersJavaScript;
 use App\Models\Todo;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Collection;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;
 
@@ -15,6 +16,15 @@ class TodoList extends Component
     public function component(): string
     {
         return 'TodoList/index.js';
+    }
+
+    public function initialData(Collection $data): Collection
+    {
+        $data->put('message', 'This is a message from the server');
+
+        $data->put('todos', Todo::all());
+
+        return $data;
     }
 
     #[Renderless]

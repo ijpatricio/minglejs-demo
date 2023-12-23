@@ -9,13 +9,14 @@ const createComponent = (el, mingleId, wireId, Component) => {
 
     const root = createRoot(el)
 
-    root.render(<Component wire={wire} wireId={wireId} />)
+    root.render(<Component wire={wire} wireId={wireId} initialData={JSON.parse(el.dataset.initial)} />)
 }
 
 const createReactComponent = (mingleId, wireId, Component, ) => {
 
     Livewire.hook('element.init', ({el}) => {
         const targetElement = el.querySelector(`#${mingleId}`)
+
 
         if (!targetElement || targetElement.dataset.reactApp) {
             return

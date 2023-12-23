@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {motion} from 'framer-motion'
 
-function HelloWorld({wire}) {
+function HelloWorld({wire, ...props}) {
 
     const [usersAmount, setUsersAmount] = useState('')
 
@@ -21,6 +21,7 @@ function HelloWorld({wire}) {
                     <h2>React Component in Laravel</h2>
                 </div>
                 <div className="card-body"> <p>Users found: {usersAmount}</p> </div>
+                <div className="card-body"> <p>Initial data: {JSON.stringify(props.initialData)}</p> </div>
             </div>
         </motion.div>
     )

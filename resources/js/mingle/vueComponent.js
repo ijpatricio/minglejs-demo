@@ -13,7 +13,9 @@ const createComponent = (mingleId, wireId, component) => {
 
     const wire = window.Livewire.find(wireId)
 
-    const app = createApp(component, {wire, wireId})
+    const app = createApp(component, {
+        wire, wireId, initialData: JSON.parse(el.dataset.initial)
+    })
 
     app.mount(el)
 }

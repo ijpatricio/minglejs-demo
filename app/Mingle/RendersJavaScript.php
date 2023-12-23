@@ -2,6 +2,7 @@
 
 namespace App\Mingle;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 trait RendersJavaScript
@@ -11,6 +12,13 @@ trait RendersJavaScript
     public function componentKey(): string
     {
         return Str::before($this->component(), '/');
+    }
+
+    public function initialData(Collection $data): Collection
+    {
+        //
+
+        return $data;
     }
 
     public function mountRendersJavaScript()

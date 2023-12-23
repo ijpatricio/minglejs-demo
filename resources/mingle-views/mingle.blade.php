@@ -15,7 +15,7 @@
 
 <div>
     <div id="{{ $this->mingleId }}-container" wire:ignore x-ignore>
-        <div id="{{ $this->mingleId }}"></div>
+        <div id="{{ $this->mingleId }}" data-initial="{{ json_encode($this->initialData(collect())) }}"></div>
     </div>
 </div>
 

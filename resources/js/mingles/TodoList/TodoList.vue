@@ -2,12 +2,16 @@
 import { Button } from '@/components/ui/button'
 import { Switch } from '@/components/ui/switch'
 import { Input } from '@/components/ui/input'
+
 const props = defineProps({
     wire: {},
     wireId: {},
+    initialData: {},
 })
 
 const message = 'I\'m a JS TodoList'
+
+console.log(props.initialData)
 </script>
 
 <template>
