@@ -17,10 +17,9 @@ trait RendersJavaScript
     {
         $scriptPath = 'resources/js/components/' . $this->component() . '/index.js';
 
-        return view('livewire.mingle', [
+        return view('mingle::mingle', [
             'mingleId' => $this->mingleId,
             'script_path' => $scriptPath,
         ]);
     }
-
 }
