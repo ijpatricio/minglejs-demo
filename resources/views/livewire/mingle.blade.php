@@ -1,4 +1,5 @@
 @props([
+    'mingleId',
     'script_path',
 ])
 
@@ -9,7 +10,7 @@
 @push('scripts')
     <script type="module">
 
-        const targetId = '{{ $this->id }}'
+        const targetId = '{{ $mingleId }}'
 
         const wire = () => window.Livewire.find('{{ $_instance->getId() }}')
 
@@ -46,9 +47,26 @@
         })
 
         Livewire.hook('morph.removing', ({el}) => {
-            if (el.id === '{{ $this->id }}-container') {
+            if (el.id === '{{ $mingleId }}-container') {
                 el.firstElementChild.__vue_app__.unmount()
             }
         })
     </script>
 @endpush
+
+<div>
+    <div>
+        <button
+            x-on:click="$wire.isVisible = !$wire.isVisible ; $wire.$refresh()"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+            Toggle visibility
+        </button>
+    </div>
+
+    @if($isVisible)
+        <div id="{{ $this->mingleId }}-container" wire:ignore x-ignore>
+            <div id="{{ $this->mingleId }}"></div>
+        </div>
+    @endif
+</div>

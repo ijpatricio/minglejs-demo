@@ -5,7 +5,6 @@ namespace App\Livewire;
 use App\Mingle\RendersJavaScript;
 use App\Models\Todo;
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Str;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;
 
@@ -15,15 +14,9 @@ class TodoList extends Component
 
     public $isVisible = true;
 
-    public $id;
-    public $mingleId;
-
-    public function render()
+    public function component(): string
     {
-        $this->mingleId = 'mingle-' . Str::random();
-        $this->id = $this->mingleId;
-
-        return view('livewire.todo-list');
+        return 'TodoList';
     }
 
     #[Renderless]
@@ -52,10 +45,5 @@ class TodoList extends Component
     public function laravelVersion()
     {
         return "Laravel version: ".Application::VERSION;
-    }
-
-    public function component(): string
-    {
-        return 'TodoList';
     }
 }
