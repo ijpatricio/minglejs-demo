@@ -16,7 +16,7 @@ class TodoList extends Component
 
     public function component(): string
     {
-        return 'TodoList';
+        return 'TodoList/index.js';
     }
 
     #[Renderless]

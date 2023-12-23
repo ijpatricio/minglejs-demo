@@ -19,7 +19,7 @@
         console.log('Mingle init', window.Mingle)
 
         document.addEventListener('livewire:initialized', () => {
-            window.Mingle['{{ $this->component() }}']
+            window.Mingle['{{ $this->componentKey() }}']
                 .create(
                     '{{ $this->mingleId }}',
                     window.Livewire.find('{{ $_instance->getId() }}'),

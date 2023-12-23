@@ -11,6 +11,6 @@ class HelloWorld extends Component
 
     public function component(): string
     {
-        return 'HelloWorld';
+        return 'HelloWorld/index.jsx';
     }
 }

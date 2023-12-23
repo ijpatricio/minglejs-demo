@@ -8,6 +8,11 @@ trait RendersJavaScript
 {
     public $mingleId;
 
+    public function componentKey(): string
+    {
+        return Str::before($this->component(), '/');
+    }
+
     public function mountRendersJavaScript()
     {
         $this->mingleId = 'mingle-' . Str::random();
