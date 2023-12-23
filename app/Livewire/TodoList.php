@@ -22,7 +22,7 @@ class TodoList extends Component
     {
         $data->put('message', 'This is a message from the server');
 
-        $data->put('todos', Todo::all());
+        $data->put('todos', Todo::all()->map->only('description', 'is_complete'));
 
         return $data;
     }
