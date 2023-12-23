@@ -1,4 +1,4 @@
-<x-joined script_path="resources/js/components/TodoList/index.js"/>
+<x-mingle script_path="resources/js/components/TodoList/index.js"/>
 
 <div>
     <div>
@@ -11,8 +11,8 @@
     </div>
 
     @if($isVisible)
-        <div id="{{ $this->id }}-container" wire:ignore x-ignore>
-            <div id="{{ $this->id }}"></div>
+        <div id="{{ $this->mingleId }}-container" wire:ignore x-ignore>
+            <div id="{{ $this->mingleId }}"></div>
         </div>
     @endif
 </div>

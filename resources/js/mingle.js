@@ -30,4 +30,5 @@ const register = (components) => {
 
 }
 
+
 export default register
