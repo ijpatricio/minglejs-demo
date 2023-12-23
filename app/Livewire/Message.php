@@ -3,7 +3,6 @@
 namespace App\Livewire;
 
 use App\Mingle\RendersJavaScript;
-use App\Models\Todo;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Livewire\Component;
@@ -28,5 +27,10 @@ class Message extends Component
         $data->put('message', $message);
 
         return $data;
+    }
+
+    public function save($message)
+    {
+        File::put(base_path('message.txt'), $message.PHP_EOL);
     }
 }

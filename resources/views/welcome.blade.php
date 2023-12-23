@@ -14,7 +14,6 @@
 
         <livewire:message />
 
-
         <livewire:todo-list />
 
     </div>
