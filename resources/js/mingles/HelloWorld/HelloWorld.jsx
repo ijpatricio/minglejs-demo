@@ -16,9 +16,9 @@ function HelloWorld({wire, ...props}) {
             whileHover={{scale: 1.2}}
             whileTap={{scale: 1.1}}
             drag="x"
-            dragConstraints={{left: -100, right: 100}}
+            dragConstraints={{left: -200, right: 200}}
         >
-            <div className="mt-5 text-2xl text-center">
+            <div className="my-10 bg-lime-300 rounded-xl p-4 text-2xl text-center">
                 <div className="text-indigo-500">
                     <h2>React Component in Laravel</h2>
                 </div>

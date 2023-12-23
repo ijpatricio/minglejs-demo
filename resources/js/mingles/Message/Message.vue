@@ -39,8 +39,11 @@ const save = () => {
 </script>
 
 <template>
-    <div>
-        <div class="my-4">
+    <div class="my-10 bg-cyan-300 rounded-xl p-4">
+        <div>
+            Message
+        </div>
+        <div class="flex gap-4 my-4">
             <Input v-model="message"/>
             <Button @click="save" class="min-w-24"> Save</Button>
         </div>

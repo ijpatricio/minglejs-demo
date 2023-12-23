@@ -14,7 +14,7 @@ const message = 'I\'m a VueJS TodoList'
 </script>
 
 <template>
-    <div class="mt-12">
+    <div class="my-10 bg-yellow-300 rounded-xl p-4">
         <p v-text="message" />
 
         <div class="flex gap-4 my-8">

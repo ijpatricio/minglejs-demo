@@ -6,7 +6,6 @@
 
         <h1 class="text-2xl font-bold">Let's Mingle</h1>
 
-        <div class="h-32"></div>
 
         <livewire:message />
 
