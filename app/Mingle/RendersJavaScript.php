@@ -23,7 +23,6 @@ trait RendersJavaScript
         $scriptPath = 'resources/js/mingles/' . $this->component();
 
         return view('mingle::mingle', [
-            'mingleId' => $this->mingleId,
             'script_path' => $scriptPath,
         ]);
     }

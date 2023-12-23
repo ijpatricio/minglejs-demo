@@ -1,4 +1,4 @@
-import { mingleVue } from '@/mingle'
+import { registerVueMingle } from '@/mingle'
 import TodoList from './TodoList.vue'
 
-mingleVue('TodoList', TodoList)
+registerVueMingle('TodoList', TodoList)

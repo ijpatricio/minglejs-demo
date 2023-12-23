@@ -1,14 +1,3 @@
-@props([
-    'mingleId',
-    'script_path',
-])
-
-@pushonce('head-scripts')
-    <script type="module">
-        window.Mingle = window.Mingle || {}
-    </script>
-@endpushonce
-
 @push('head-scripts')
     @vite($script_path)
 @endpush
@@ -20,7 +9,7 @@
             mingleId = '{{ $this->mingleId }}',
             wireId = '{{ $_instance->getId() }}'
 
-            window.Mingle[componentKey].create(mingleId, wireId)
+        window.Mingle.Elements[componentKey].boot(mingleId, wireId)
     </script>
 @endpush
 

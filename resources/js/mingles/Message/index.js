@@ -1,4 +1,4 @@
-import { mingleVue } from '@/mingle'
+import { registerVueMingle } from '@/mingle'
 import Message from './Message.vue'
 
-mingleVue('Message', Message)
+registerVueMingle('Message', Message)

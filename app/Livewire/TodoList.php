@@ -12,8 +12,6 @@ class TodoList extends Component
 {
     use RendersJavaScript;
 
-    public $isVisible = true;
-
     public function component(): string
     {
         return 'TodoList/index.js';

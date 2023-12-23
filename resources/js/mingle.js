@@ -1,21 +1,29 @@
 import createReactComponent from '@/mingle/reactComponent.jsx'
 import createVueComponent from '@/mingle/vueComponent.js'
 
-const mingleVue = (name, component) => {
-    window.Mingle[name] = {
-        create(mingleId, wireId) {
+const Mingle = {
+    Elements: {},
+}
+
+window.Mingle = window.Mingle || Mingle
+
+const registerVueMingle = (name, component) => {
+    Mingle.Elements[name] = {
+        boot(mingleId, wireId) {
             createVueComponent(mingleId, wireId, component)
         }
     }
 }
 
-const mingleReact = (name, component) => {
-    window.Mingle[name] = {
-        create(mingleId, wireId) {
+const registerReactMingle = (name, component) => {
+    Mingle.Elements[name] = {
+        boot(mingleId, wireId) {
             createReactComponent(mingleId, wireId, component)
         }
     }
 }
 
-export {mingleReact}
-export {mingleVue}
+export {registerReactMingle}
+export {registerVueMingle}
+
+export default Mingle

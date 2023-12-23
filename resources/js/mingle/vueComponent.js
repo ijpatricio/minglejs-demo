@@ -20,13 +20,6 @@ const createComponent = (mingleId, wireId, component) => {
 
 const createVueComponent = (mingleId, wireId, component) => {
 
-    document.addEventListener('livewire:initialized', () => {
-        const targetElement = document.querySelector(`#${mingleId}`)
-        if (targetElement && !targetElement.__vue_app__) {
-            createComponent(mingleId, wireId, component)
-        }
-    })
-
     Livewire.hook('element.init', ({el}) => {
         const targetElement = el.querySelector(`#${mingleId}`)
         if (targetElement && !targetElement.__vue_app__) {
@@ -34,11 +27,20 @@ const createVueComponent = (mingleId, wireId, component) => {
         }
     })
 
-    Livewire.hook('morph.removing', ({el}) => {
-        if (el.id === `${mingleId}-container`) {
-            el.firstElementChild.__vue_app__.unmount()
-        }
-    })
+    // TODO: Check if we need to do this, or DOMContentLoaded on Blade Mingles (non-Livewire)
+    // document.addEventListener('livewire:initialized', () => {
+    //     const targetElement = document.querySelector(`#${mingleId}`)
+    //     if (targetElement && !targetElement.__vue_app__) {
+    //         createComponent(mingleId, wireId, component)
+    //     }
+    // })
+
+    // TODO: When dealing with nested or DOM removals
+    // Livewire.hook('morph.removing', ({el}) => {
+    //     if (el.id === `${mingleId}-container`) {
+    //         el.firstElementChild.__vue_app__.unmount()
+    //     }
+    // })
 
 }
 
