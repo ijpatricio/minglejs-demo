@@ -9,6 +9,8 @@ function HelloWorld({wire, ...props}) {
         setUsersAmount(response)
     })
 
+    const message = props.initialData.message
+
     return (
         <motion.div
             whileHover={{scale: 1.2}}
@@ -21,7 +23,7 @@ function HelloWorld({wire, ...props}) {
                     <h2>React Component in Laravel</h2>
                 </div>
                 <div className="card-body"> <p>Users found: {usersAmount}</p> </div>
-                <div className="card-body"> <p>Initial data: {JSON.stringify(props.initialData)}</p> </div>
+                <div className="card-body"> <p>Initial data: {message}</p> </div>
             </div>
         </motion.div>
     )
