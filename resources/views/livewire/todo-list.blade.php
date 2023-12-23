@@ -11,7 +11,7 @@
     </div>
 
     @if($isVisible)
-        <div wire:ignore x-ignore>
+        <div id="{{ $this->id }}-container" wire:ignore x-ignore>
             <div id="{{ $this->id }}"></div>
         </div>
     @endif

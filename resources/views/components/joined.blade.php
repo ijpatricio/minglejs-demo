@@ -16,11 +16,11 @@
         const createComponent = (targetElement = null) => {
             let el = targetElement
 
-            if (! el) {
+            if (!el) {
                 el = document.querySelector(`#${targetId}`)
             }
 
-            if (! el) {
+            if (!el) {
                 return
             }
 
@@ -42,6 +42,12 @@
             const targetElement = el.querySelector(`#${targetId}`)
             if (targetElement && !targetElement.__vue_app__) {
                 createComponent(targetElement)
+            }
+        })
+
+        Livewire.hook('morph.removing', ({el}) => {
+            if (el.id === '{{ $this->id }}-container') {
+                el.firstElementChild.__vue_app__.unmount()
             }
         })
     </script>
