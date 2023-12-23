@@ -1,37 +1,21 @@
-import {createApp} from 'vue/dist/vue.esm-bundler'
-import createComponent from '@/mingle/reactComponent.jsx'
+import createReactComponent from '@/mingle/reactComponent.jsx'
+import createVueComponent from '@/mingle/vueComponent.js'
 
 const mingleVue = (name, component) => {
     window.Mingle[name] = {
-        create(id, $wire, wireId) {
-
-            let el = id
-
-            if(typeof id === 'string') {
-                el = document.getElementById(id)
-            }
-
-            if (el) {
-                const app = createApp(
-                    component, {
-                        wire: $wire,
-                        wireId,
-                    }
-                )
-
-                app.mount(el)
-            }
+        create(mingleId, wireId) {
+            createVueComponent(mingleId, wireId, component)
         }
     }
 }
 
 const mingleReact = (name, component) => {
     window.Mingle[name] = {
-        create(id, $wire, wireId) {
-            createComponent(id, component, $wire, wireId)
+        create(mingleId, wireId) {
+            createReactComponent(mingleId, wireId, component)
         }
     }
 }
 
-export { mingleReact }
-export { mingleVue }
+export {mingleReact}
+export {mingleVue}

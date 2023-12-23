@@ -15,19 +15,12 @@
 
 @push('scripts')
     <script type="module">
+        const
+            componentKey = '{{ $this->componentKey() }}',
+            mingleId = '{{ $this->mingleId }}',
+            wireId = '{{ $_instance->getId() }}'
 
-        console.log('Mingle init', window.Mingle)
-
-        document.addEventListener('livewire:initialized', () => {
-            window.Mingle['{{ $this->componentKey() }}']
-                .create(
-                    '{{ $this->mingleId }}',
-                    window.Livewire.find('{{ $_instance->getId() }}'),
-                    '{{ $_instance->getId() }}',
-                )
-        })
-
-
+            window.Mingle[componentKey].create(mingleId, wireId)
     </script>
 @endpush
 
