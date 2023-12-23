@@ -15,7 +15,7 @@ trait RendersJavaScript
 
     public function render()
     {
-        $scriptPath = 'resources/js/components/' . $this->component() . '/index.js';
+        $scriptPath = 'resources/js/mingles/' . $this->component() . '/index.js';
 
         return view('mingle::mingle', [
             'mingleId' => $this->mingleId,

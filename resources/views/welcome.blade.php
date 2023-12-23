@@ -8,11 +8,13 @@
 
         <div class="h-32"></div>
 
+        <livewire:hello-world />
+
         <livewire:todo-list />
 
-        <div class="h-32"></div>
+{{--        <div class="h-32"></div>--}}
 
-        <livewire:todo-list :is-visible="false"/>
+{{--        <livewire:todo-list :is-visible="false"/>--}}
 
     </div>
 

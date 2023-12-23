@@ -3,6 +3,7 @@ import {defineConfig} from 'vite'
 import laravel, {refreshPaths} from 'laravel-vite-plugin'
 import dotenv from 'dotenv'
 import vue from '@vitejs/plugin-vue'
+import reactRefresh from '@vitejs/plugin-react-refresh'
 
 dotenv.config()
 
@@ -36,6 +37,7 @@ export default defineConfig({
                 },
             },
         }),
+        reactRefresh(),
     ],
     resolve: {
         alias: {

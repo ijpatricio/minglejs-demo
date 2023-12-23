@@ -2,10 +2,10 @@ import {createApp} from 'vue/dist/vue.esm-bundler'
 
 const register = (components) => {
 
-    window.JSComponents = window.JSComponents || {}
+    window.Mingle = window.Mingle || {}
 
     for (const [name, component] of Object.entries(components)) {
-        window.JSComponents[name] = {
+        window.Mingle[name] = {
             create(id, $wire, wireId) {
 
                 let el = id
