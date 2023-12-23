@@ -9,9 +9,8 @@ const props = defineProps({
     initialData: {},
 })
 
-const message = 'I\'m a JS TodoList'
+const message = 'I\'m a VueJS TodoList'
 
-console.log(props.initialData)
 </script>
 
 <template>

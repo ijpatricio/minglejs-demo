@@ -8,7 +8,12 @@
 
         <div class="h-32"></div>
 
+        <livewire:message />
+
         <livewire:hello-world />
+
+        <livewire:message />
+
 
         <livewire:todo-list />
 
