@@ -1,7 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {motion} from 'framer-motion'
 
-function HelloWorld({wire, ...props}) {
+function HelloWorld({wire}) {
+
+    const [usersAmount, setUsersAmount] = useState('')
+
+    wire.countUsers().then((response) => {
+        setUsersAmount(response)
+    })
 
     return (
         <motion.div
@@ -14,7 +20,7 @@ function HelloWorld({wire, ...props}) {
                 <div className="text-indigo-500">
                     <h2>React Component in Laravel</h2>
                 </div>
-                <div className="card-body">Woohoo let's go!!</div>
+                <div className="card-body"> <p>Users found: {usersAmount}</p> </div>
             </div>
         </motion.div>
     )

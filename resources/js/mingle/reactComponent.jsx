@@ -1,19 +1,29 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
 
-const createComponent = (mingleId, wireId, Component, ) => {
-
-    const el = document.getElementById(mingleId)
-
-    if (! el) {
-        return
-    }
+const createComponent = (el, mingleId, wireId, Component) => {
 
     const wire = window.Livewire.find(wireId)
+
+    el.dataset.reactApp = 'true'
 
     const root = createRoot(el)
 
     root.render(<Component wire={wire} wireId={wireId} />)
 }
 
-export default createComponent
+const createReactComponent = (mingleId, wireId, Component, ) => {
+
+    Livewire.hook('element.init', ({el}) => {
+        const targetElement = el.querySelector(`#${mingleId}`)
+
+        if (!targetElement || targetElement.dataset.reactApp) {
+            return
+        }
+
+        createComponent(targetElement, mingleId, wireId, Component)
+    })
+
+}
+
+export default createReactComponent

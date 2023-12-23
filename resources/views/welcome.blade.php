@@ -10,11 +10,7 @@
 
         <livewire:hello-world />
 
-        <livewire:hello-world />
-
         <livewire:todo-list />
-
-        <livewire:todo-list :is-visible="false"/>
 
     </div>
 

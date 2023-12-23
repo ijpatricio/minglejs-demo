@@ -1,5 +1,5 @@
-import createReactComponent from '@/mingle/reactComponent.jsx'
-import createVueComponent from '@/mingle/vueComponent.js'
+import bootReactComponent from '@/mingle/reactComponent.jsx'
+import bootVueComponent from '@/mingle/vueComponent.js'
 
 const Mingle = {
     Elements: {},
@@ -10,7 +10,7 @@ window.Mingle = window.Mingle || Mingle
 const registerVueMingle = (name, component) => {
     Mingle.Elements[name] = {
         boot(mingleId, wireId) {
-            createVueComponent(mingleId, wireId, component)
+            bootVueComponent(mingleId, wireId, component)
         }
     }
 }
@@ -18,7 +18,7 @@ const registerVueMingle = (name, component) => {
 const registerReactMingle = (name, component) => {
     Mingle.Elements[name] = {
         boot(mingleId, wireId) {
-            createReactComponent(mingleId, wireId, component)
+            bootReactComponent(mingleId, wireId, component)
         }
     }
 }
