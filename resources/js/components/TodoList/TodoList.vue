@@ -39,7 +39,7 @@ export default {
     }),
     async mounted() {
         console.log(
-            await this.wire.randomText()
+            await this.wire.laravelVersion()
         )
         this.getTodos()
     },

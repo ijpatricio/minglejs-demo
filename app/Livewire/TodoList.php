@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Todo;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;
@@ -41,9 +42,9 @@ class TodoList extends Component
     }
 
     #[Renderless]
-    public function randomText()
+    public function laravelVersion()
     {
-        return Str::random(10);
+        return "Laravel version: ".Application::VERSION;
     }
 
     public function render()

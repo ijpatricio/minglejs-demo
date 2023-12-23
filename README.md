@@ -1,3 +1,17 @@
+# What is this?
+
+This is a way of using Vue/React components in a Laravel Livewire app.
+
+It's very different from an SPA or Inertia, because we can use Livewire, Alpine, Vue and React, all in the same app.
+This is very convenient because say:
+- we want to use a couple of Vue components on an individual marketing page
+- on another one we want to use React because of a specific component
+- also we want to use Livewire on another
+
+Well now you can.
+
+Most likely you will pair Livewire with just one taste of JS framework, but you can mix and match as you wish.
+
 # Why?
 
 - Landing pages, marketing pages, etc. => Plenty of React/Vue components.
