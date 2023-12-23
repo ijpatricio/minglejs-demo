@@ -1,6 +1,4 @@
-import registerComponents from '@/mingle.js'
+import { mingleVue } from '@/mingle'
 import Message from './Message.vue'
 
-registerComponents({
-    Message,
-})
+mingleVue('Message', Message)

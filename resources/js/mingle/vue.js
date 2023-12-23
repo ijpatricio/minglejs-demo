@@ -1,9 +1,9 @@
-export default (mingleId) => {
+export default (mingleId, resolveWire) => {
 
     const targetId = mingleId
     const targetContainerId = `${targetId}-container`
 
-    const wire = () => window.Livewire.find('{{ $_instance->getId() }}')
+    const wire = resolveWire()
 
     const createComponent = (targetElement = null) => {
         let el = targetElement

@@ -9,15 +9,25 @@
     </script>
 @endpushonce
 
-@pushonce('head-scripts')
+@push('head-scripts')
     @vite($script_path)
-@endpushonce
+@endpush
 
 @push('scripts')
     <script type="module">
-        console.log(2222)
 
-        Mingle.init('{{ $this->mingleId }}', '{{ $_instance->getId() }}')
+        console.log('Mingle init', window.Mingle)
+
+        document.addEventListener('livewire:initialized', () => {
+            window.Mingle['{{ $this->component() }}']
+                .create(
+                    '{{ $this->mingleId }}',
+                    window.Livewire.find('{{ $_instance->getId() }}'),
+                    '{{ $_instance->getId() }}',
+                )
+        })
+
+
     </script>
 @endpush
 

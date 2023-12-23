@@ -1,7 +1,4 @@
-import registerComponents from '@/mingle.js'
+import { mingleVue } from '@/mingle'
 import TodoList from './TodoList.vue'
 
-registerComponents({
-    TodoList,
-})
-
+mingleVue('TodoList', TodoList)

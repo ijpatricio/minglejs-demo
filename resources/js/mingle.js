@@ -1,34 +1,37 @@
 import {createApp} from 'vue/dist/vue.esm-bundler'
+import createComponent from '@/mingle/reactComponent.jsx'
 
-const register = (components) => {
+const mingleVue = (name, component) => {
+    window.Mingle[name] = {
+        create(id, $wire, wireId) {
 
-    window.Mingle = window.Mingle || {}
+            let el = id
 
-    for (const [name, component] of Object.entries(components)) {
-        window.Mingle[name] = {
-            create(id, $wire, wireId) {
+            if(typeof id === 'string') {
+                el = document.getElementById(id)
+            }
 
-                let el = id
+            if (el) {
+                const app = createApp(
+                    component, {
+                        wire: $wire,
+                        wireId,
+                    }
+                )
 
-                if(typeof id === 'string') {
-                    el = document.getElementById(id)
-                }
-
-                if (el) {
-                    const app = createApp(
-                        component, {
-                            wire: $wire,
-                            wireId,
-                        }
-                    )
-
-                    app.mount(el)
-                }
+                app.mount(el)
             }
         }
     }
-
 }
 
+const mingleReact = (name, component) => {
+    window.Mingle[name] = {
+        create(id, $wire, wireId) {
+            createComponent(id, component, $wire, wireId)
+        }
+    }
+}
 
-export default register
+export { mingleReact }
+export { mingleVue }

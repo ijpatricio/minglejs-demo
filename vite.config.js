@@ -23,7 +23,13 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: 'resources/js/app.js',
+            input: [
+                'resources/js/mingles/HelloWorld/index.jsx',
+                'resources/js/mingles/Message/index.js',
+                'resources/js/mingles/TodoList/index.js',
+                'resources/sass/app.scss',
+                'resources/js/app.js',
+            ],
             refresh: [
                 ...refreshPaths,
                 'app/**/*.php',
