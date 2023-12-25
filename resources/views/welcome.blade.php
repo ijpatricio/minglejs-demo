@@ -17,4 +17,5 @@
 
     </div>
 
+    <livewire:toaster />
 @endsection
