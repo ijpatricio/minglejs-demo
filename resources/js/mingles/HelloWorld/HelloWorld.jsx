@@ -9,7 +9,7 @@ function HelloWorld({wire, ...props}) {
         setUsersAmount(response)
     })
 
-    const message = props.initialData.message
+    const message = props.mingleData.message
 
     return (
         <motion.div
@@ -23,7 +23,7 @@ function HelloWorld({wire, ...props}) {
                     <h2>React Component in Laravel</h2>
                 </div>
                 <div className="card-body"> <p>Users found: {usersAmount}</p> </div>
-                <div className="card-body"> <p>Initial data: {message}</p> </div>
+                <div className="card-body"> <p>Mingle data: {message}</p> </div>
             </div>
         </motion.div>
     )

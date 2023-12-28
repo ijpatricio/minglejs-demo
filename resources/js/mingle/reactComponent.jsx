@@ -9,7 +9,7 @@ const createComponent = (el, mingleId, wireId, Component) => {
 
     const root = createRoot(el)
 
-    root.render(<Component wire={wire} wireId={wireId} initialData={JSON.parse(el.dataset.initial)} />)
+    root.render(<Component wire={wire} wireId={wireId} mingleData={JSON.parse(el.dataset.mingleData)} />)
 }
 
 const createReactComponent = (mingleId, wireId, Component, ) => {

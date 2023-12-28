@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 const props = defineProps({
     wire: {},
     wireId: {},
-    initialData: {},
+    mingleData: {},
 })
 
 const message = 'I\'m a VueJS TodoList'

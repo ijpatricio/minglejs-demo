@@ -15,7 +15,11 @@
 
 <div>
     <div id="{{ $this->mingleId }}-container" wire:ignore x-ignore>
-        <div id="{{ $this->mingleId }}" data-initial="{{ json_encode($this->initialData(collect())) }}"></div>
+        <div
+            id="{{ $this->mingleId }}"
+            data-mingle-boot="{{ json_encode($this->mingleBoot(collect())) }}"
+            data-mingle-data="{{ json_encode($this->mingleData(collect())) }}"
+        ></div>
     </div>
 </div>
 

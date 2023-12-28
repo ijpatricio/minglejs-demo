@@ -17,7 +17,7 @@ class Message extends Component
         return 'Message/index.js';
     }
 
-    public function initialData(Collection $data): Collection
+    public function mingleData(Collection $data): Collection
     {
         if (! File::exists(base_path('message.txt'))) {
             File::put(base_path('message.txt'), 'This is a message from the server'.PHP_EOL);

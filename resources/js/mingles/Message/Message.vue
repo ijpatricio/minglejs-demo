@@ -11,12 +11,12 @@ const {toast} = useToast()
 const props = defineProps({
     wire: {},
     wireId: {},
-    initialData: {},
+    mingleData: {},
 })
 
 const {message} = useMessage()
 
-message.value = props.initialData.message
+message.value = props.mingleData.message
 
 const {x, y} = useMouse()
 

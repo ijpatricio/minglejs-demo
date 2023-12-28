@@ -18,7 +18,7 @@ class TodoList extends Component
         return 'TodoList/index.js';
     }
 
-    public function initialData(Collection $data): Collection
+    public function mingleData(Collection $data): Collection
     {
         $data->put('message', 'This is a message from the server');
 

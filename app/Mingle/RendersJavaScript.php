@@ -14,7 +14,14 @@ trait RendersJavaScript
         return Str::before($this->component(), '/');
     }
 
-    public function initialData(Collection $data): Collection
+    public function mingleBoot(Collection $data): Collection
+    {
+        //
+
+        return $data;
+    }
+
+    public function mingleData(Collection $data): Collection
     {
         //
 
