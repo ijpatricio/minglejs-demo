@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Todo;
 use Ijpatricio\Mingle\RendersJavaScript;
+use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Collection;
 use Livewire\Attributes\Renderless;
@@ -22,13 +23,13 @@ class TodoList extends Component
     {
         $data->put('message', 'This is a message from the server');
 
-        $data->put('todos', Todo::all()->map->only('description', 'is_complete'));
+        $data->put('todos', Todo::all());
 
         return $data;
     }
 
     #[Renderless]
-    public function getTodos()
+    public function getTodos(): EloquentCollection
     {
         return Todo::all();
     }
