@@ -27,6 +27,7 @@ export default defineConfig({
                 'resources/js/mingles/HelloWorld/index.jsx',
                 'resources/js/mingles/Message/index.js',
                 'resources/js/mingles/TodoList/index.js',
+                'resources/js/mingles/Toaster/index.js',
                 'resources/sass/app.scss',
                 'resources/js/app.js',
             ],
