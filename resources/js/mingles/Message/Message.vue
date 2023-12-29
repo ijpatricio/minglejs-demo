@@ -1,5 +1,4 @@
 <script setup>
-import Toaster from '@/components/ui/toast/Toaster.vue'
 import {useToast} from '@/components/ui/toast/use-toast'
 import {useMouse} from '@/composables/useMouse'
 import useMessage from '@/composables/useMessage'
@@ -53,5 +52,4 @@ const save = () => {
         </div>
 
     </div>
-<!--    <Toaster/>-->
 </template>

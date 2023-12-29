@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::view('/', 'home')->name('home');
+Route::view('/react', 'react')->name('react');
+Route::view('/vue', 'vue')->name('vue');
+Route::view('/vue-composables', 'vue-composables')->name('vue-composables');

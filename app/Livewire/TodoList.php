@@ -36,6 +36,10 @@ class TodoList extends Component
     #[Renderless]
     public function addTodo($todo)
     {
+        if (blank($todo)) {
+            dd('Todo cannot be blank');
+        }
+
         Todo::create([
             'description' => $todo,
         ]);
