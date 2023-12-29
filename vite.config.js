@@ -49,6 +49,7 @@ export default defineConfig({
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./resources/js"),
+            "@mingle": path.resolve(__dirname, "./mingle/resources/js"),
         },
     },
 })

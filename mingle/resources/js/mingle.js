@@ -1,5 +1,5 @@
-import bootReactComponent from '@/mingle/reactComponent.jsx'
-import bootVueComponent from '@/mingle/vueComponent.js'
+import bootReactComponent from './reactComponent.jsx'
+import bootVueComponent from './vueComponent.js'
 
 const Mingle = {
     Elements: {},

@@ -28,6 +28,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Ijpatricio\\Mingle\\": "mingle/src",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

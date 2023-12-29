@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mingle;
+namespace Ijpatricio\Mingle;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;

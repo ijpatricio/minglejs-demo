@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mingle;
+namespace Ijpatricio\Mingle;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,6 +19,6 @@ class MingleserviceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadViewsFrom(base_path('/resources/mingle-views'), 'mingle');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'mingle');
     }
 }

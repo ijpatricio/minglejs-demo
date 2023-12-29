@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use App\Mingle\RendersJavaScript;
 use App\Models\User;
+use Ijpatricio\Mingle\RendersJavaScript;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Livewire\Attributes\Renderless;

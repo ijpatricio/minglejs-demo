@@ -2,7 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Mingle\RendersJavaScript;
+use Ijpatricio\Mingle\RendersJavaScript;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
