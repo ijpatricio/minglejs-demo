@@ -12,6 +12,21 @@ Well now you can.
 
 Most likely you will pair Livewire with just one taste of JS framework, but you can mix and match as you wish.
 
+# Development
+
+Clone the repository, then:
+```
+cp .env.example .env
+composer install
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate:fresh --seed
+php artisan serve
+# In another terminal
+npm ci
+npm run dev
+```
+
 # Why?
 
 - Landing pages, marketing pages, etc. => Plenty of React/Vue components.
