@@ -27,7 +27,7 @@ const getTodos = () => {
 }
 
 const addTodo = () => {
-    wire.addTodo(this.todo).then(async (r) => {
+    wire.addTodo(todo.new).then(async (r) => {
         todo.new = ''
         getTodos()
     })
