@@ -1,3 +1,5 @@
+![Intro.png](Readme-Intro.png)
+
 # What is this?
 
 This is a way of using Vue/React components in a Laravel Livewire app.
