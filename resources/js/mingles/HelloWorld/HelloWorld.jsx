@@ -5,9 +5,9 @@ function HelloWorld({wire, ...props}) {
 
     const [usersAmount, setUsersAmount] = useState('')
 
-    // wire.countUsers().then((response) => {
-    //     setUsersAmount(response)
-    // })
+    wire.countUsers().then((response) => {
+        setUsersAmount(response)
+    })
 
     const message = props.mingleData.message
 

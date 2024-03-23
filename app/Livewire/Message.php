@@ -14,7 +14,7 @@ class Message extends Component
 
     public function component(): string
     {
-        return 'Message/index.js';
+        return 'resources/js/mingles/Message/index.js';
     }
 
     public function mingleData(Collection $data): Collection

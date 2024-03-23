@@ -1,4 +1,4 @@
 import { registerVueMingle } from '@mingle/mingle'
 import Message from './Message.vue'
 
-registerVueMingle('Message/index.js', Message)
+registerVueMingle('resources/js/mingles/Message/index.js', Message)

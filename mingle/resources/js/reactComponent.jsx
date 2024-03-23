@@ -12,21 +12,4 @@ const createComponent = (el, mingleId, wireId, Component) => {
     root.render(<Component wire={wire} wireId={wireId} mingleData={JSON.parse(el.dataset.mingleData)} />)
 }
 
-const createReactComponent = (mingleId, wireId, Component, ) => {
-
-    Livewire.hook('element.init', ({el}) => {
-        const targetElement = el.querySelector(`#${mingleId}`)
-
-
-        if (!targetElement || targetElement.dataset.reactApp) {
-            return
-        }
-
-        createComponent(targetElement, mingleId, wireId, Component)
-    })
-
-}
-
 export { createComponent as createReact }
-
-export default createReactComponent
