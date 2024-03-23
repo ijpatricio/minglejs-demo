@@ -38,7 +38,17 @@ const createComponent = (mingleId, wireId, component) => {
 
 const createVueComponent = (mingleId, wireId, component) => {
 
+    Livewire.hook('component.init', ({ component, cleanup }) => {
+        // console.log('component.init', component)
+        const targetElement = document.querySelector(`#${mingleId}`)
+        if (targetElement && !targetElement.__vue_app__) {
+            createComponent(mingleId, wireId, component)
+        }
+    })
+
+
     Livewire.hook('element.init', ({el}) => {
+        // console.log('element.init', el)
         const targetElement = el.querySelector(`#${mingleId}`)
         if (targetElement && !targetElement.__vue_app__) {
             createComponent(mingleId, wireId, component)
@@ -61,5 +71,7 @@ const createVueComponent = (mingleId, wireId, component) => {
     // })
 
 }
+
+export { createComponent as createVue }
 
 export default createVueComponent

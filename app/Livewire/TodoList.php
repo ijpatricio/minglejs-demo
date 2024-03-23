@@ -14,6 +14,11 @@ class TodoList extends Component
 {
     use RendersJavaScript;
 
+    public function mount()
+    {
+        ray('mount main');
+    }
+
     public function component(): string
     {
         return 'TodoList/index.js';

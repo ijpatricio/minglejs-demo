@@ -27,4 +27,6 @@ const createReactComponent = (mingleId, wireId, Component, ) => {
 
 }
 
+export { createComponent as createReact }
+
 export default createReactComponent

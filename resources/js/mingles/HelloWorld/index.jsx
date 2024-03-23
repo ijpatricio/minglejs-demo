@@ -1,4 +1,4 @@
 import { registerReactMingle } from '@mingle/mingle'
 import HelloWorld from './HelloWorld.jsx'
 
-registerReactMingle('HelloWorld', HelloWorld)
+registerReactMingle('HelloWorld/index.jsx', HelloWorld)

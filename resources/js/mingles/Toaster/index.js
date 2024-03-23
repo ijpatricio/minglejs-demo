@@ -1,4 +1,4 @@
 import { registerVueMingle } from '@mingle/mingle'
 import Toaster from '@/components/ui/toast/Toaster.vue'
 
-registerVueMingle('Toaster', Toaster)
+registerVueMingle('Toaster/index.js', Toaster)
