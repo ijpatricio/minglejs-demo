@@ -14,7 +14,7 @@ Well now you can.
 
 Most likely you will pair Livewire with just one taste of JS framework, but you can mix and match as you wish.
 
-Try it out without installing anything, by running it in GitPod: [[Open in Gitpod](https://gitpod.io/#https://github.com/ijpatricio/minglejs-demo)]
+Try it online, by running it in GitPod: [Open in Gitpod](https://gitpod.io/#https://github.com/ijpatricio/minglejs-demo). Login quickly with GitHub, and there's a generaous free tier. It's more than enough to try stuff out.
 
 # Development
 
@@ -44,10 +44,13 @@ npm run dev
 
 # How?
 
-// 
+This is a starter as it stands. 
+I got a little paralysed before publishing as package by thinking on implementing in existing projects, since this means to tinker with existing JS files and vite config etc.
 
-# In the works
+Maybe there's a good "compromise/middle ground":
+First: having a package we can install at any point.
+Then:
+- If in a new project, just run `php artisan mingle:install`, because the file states is known, I can update them with confidence.
+- If not, follow a guide with "this couple of steps".
 
-- SPA: Check wire:navigate and `@persist`. You can use them to persist state between pages. 
-- Nested components.
-- JS add later in the DOM.
+Sounds like what I'll do. For the time being you can use this as a starter kit.

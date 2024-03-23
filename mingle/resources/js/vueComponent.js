@@ -1,7 +1,10 @@
 import {createApp} from 'vue/dist/vue.esm-bundler'
 
 const createComponent = (mingleId, wireId, component) => {
-    let el = document.querySelector(`#${mingleId}`)
+
+    const
+        el = document.getElementById(mingleId),
+        wire = window.Livewire.find(wireId)
 
     if (!el) {
         return
@@ -10,8 +13,6 @@ const createComponent = (mingleId, wireId, component) => {
     if (el.__vue_app__) {
         return
     }
-
-    const wire = window.Livewire.find(wireId)
 
     let mingleData = {}
     if (el.dataset.mingleData) {

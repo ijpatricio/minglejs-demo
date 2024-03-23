@@ -9,7 +9,7 @@ window.Mingle = window.Mingle || Mingle
 
 const registerVueMingle = (name, component) => {
     Mingle.Elements[name] = {
-        boot(el, mingleId, wireId) {
+        boot(mingleId, wireId) {
             createVue(mingleId, wireId, component)
         }
     }
@@ -17,8 +17,8 @@ const registerVueMingle = (name, component) => {
 
 const registerReactMingle = (name, component) => {
     Mingle.Elements[name] = {
-        boot(el, mingleId, wireId) {
-            createReact(el, mingleId, wireId, component)
+        boot(mingleId, wireId) {
+            createReact(mingleId, wireId, component)
         }
     }
 }

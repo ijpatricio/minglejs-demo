@@ -28,6 +28,7 @@ export default defineConfig({
                 'resources/js/mingles/Message/index.js',
                 'resources/js/mingles/TodoList/index.js',
                 'resources/js/mingles/Toaster/index.js',
+                'resources/css/filament/admin/theme.css',
                 'resources/sass/app.scss',
                 'resources/js/app.js',
             ],
