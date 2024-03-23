@@ -30,8 +30,6 @@ trait RendersJavaScript
 
     public function mountRendersJavaScript()
     {
-        ray('mount trait');
-
         $this->mingleId = 'mingle-' . Str::random();
     }
 
