@@ -15,7 +15,7 @@ class HelloWorld extends Component
 
     public function component(): string
     {
-        return 'HelloWorld/index.jsx';
+        return 'resources/js/mingles/HelloWorld/index.jsx';
     }
 
     public function mingleData(Collection $data): Collection

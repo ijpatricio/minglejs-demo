@@ -12,7 +12,7 @@ class Toaster extends Component
 
     public function component(): string
     {
-        return 'Toaster/index.js';
+        return 'resources/js/mingles/Toaster/index.js';
     }
 
     public function mingleBoot(Collection $data): Collection
