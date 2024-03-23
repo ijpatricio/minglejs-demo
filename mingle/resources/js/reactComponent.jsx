@@ -1,9 +1,11 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
 
-const createComponent = (el, mingleId, wireId, Component) => {
+const createComponent = (mingleId, wireId, Component) => {
 
-    const wire = window.Livewire.find(wireId)
+    const
+        el = document.getElementById(mingleId),
+        wire = window.Livewire.find(wireId)
 
     el.dataset.reactApp = 'true'
 

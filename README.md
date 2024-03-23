@@ -14,7 +14,7 @@ Well now you can.
 
 Most likely you will pair Livewire with just one taste of JS framework, but you can mix and match as you wish.
 
-Try it out without installing anything, by running it in GitPod: [[Open in Gitpod](https://gitpod.io/#https://github.com/ijpatricio/minglejs-demo)]
+Try it online, by running it in GitPod: [Open in Gitpod](https://gitpod.io/#https://github.com/ijpatricio/minglejs-demo). Login quickly with GitHub, and there's a generaous free tier. It's more than enough to try stuff out.
 
 # Development
 
