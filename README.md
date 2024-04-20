@@ -4,9 +4,7 @@
 
 # MingleJS Demo
 
-This is the repository with the generated code for the MingleJS demo.
-
-The demo is a simple web application that showcases the capabilities of MingleJS.
+This is the repository with the generated code for the MingleJS demo.  It is a simple web application that showcases the capabilities of MingleJS.
 
 Please check the [MingleJS documentation](https://minglejs.unitedbycode.com) for more information.
 
