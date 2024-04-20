@@ -1,0 +1,12 @@
+services:
+  mingle-general:
+    image: mingle-general
+    extra_hosts: ['host.docker.internal:host-gateway']
+    volumes:
+      - ./storage/app:/var/www/html/storage/app
+      - ./storage/logs:/var/www/html/storage/logs
+    networks: [web]
+
+networks:
+  web:
+    external: true
