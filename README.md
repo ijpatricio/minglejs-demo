@@ -10,7 +10,7 @@ The demo is a simple web application that showcases the capabilities of MingleJS
 
 Please check the [MingleJS documentation](https://minglejs.unitedbycode.com) for more information.
 
-Click [here](https://minglejs-demo.unitedbycode.com) to see the demo live.
+Click [here](https://minglejs-demo.unitedbycode.com) to visit the live demo.
 
 The original source code is available at [ijpatricio/mingle](https://github.com/ijpatricio/mingle)
 
