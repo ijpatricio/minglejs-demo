@@ -15,3 +15,19 @@ Click [here](https://minglejs-demo.unitedbycode.com) to visit the live demo.
 The original source code is available at [ijpatricio/mingle](https://github.com/ijpatricio/mingle)
 
 Thank you, and happy Mingling!
+
+# Up and running
+
+Clone the repository, then:
+
+```
+cp .env.example .env
+composer install
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate:fresh --seed
+php artisan serve
+# In another terminal
+npm ci
+npm run dev
+```
