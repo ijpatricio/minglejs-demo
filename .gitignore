@@ -17,5 +17,5 @@ yarn-error.log
 /.idea
 /.vscode
 
-# This is a wrapper-app, so let's not ignore
-#.env
+.env
+docker-compose.yml
